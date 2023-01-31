@@ -5,23 +5,26 @@ let tasks = document.querySelector(".tasks");
 let arr = [];
 let count = 0;
 
-const updateUI = (array) => {
-  input.value = "";
+const addCard = (arr) => {
   tasks.innerHTML = "";
-  array.forEach((i) => tasks.insertAdjacentHTML("afterbegin", i));
-  tasks.classList;
+  arr.forEach((i) => tasks.insertAdjacentHTML("afterbegin", i));
 };
 
 function submitHandler() {
   if (input.value.replace(/\s/g, "") !== "") {
-    count++;
     arr.push(
-      `<div class="task task${count}">
-        <p>${input.value}</p>
-        <button class="delete task${count}">delete</button>
-      </div>`
+      `<div class="task del-${count}"><p>${input.value}</p><button class="delete del-${count}">delete</button></div>`
     );
-    updateUI(arr);
+    addCard(arr);
+    input.value = "";
+
+    document.querySelector(`.del-${count}`).addEventListener("click", () => {
+      // console.log(arr.filter((i) => i.includes("del-" + count)));
+      arr = arr.filter((i) => i.includes(`del-${count}`));
+      addCard(arr);
+    });
+
+    count++;
   }
 }
 
