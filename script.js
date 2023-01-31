@@ -6,20 +6,23 @@ let arr = [];
 let count = 0;
 
 const updateUI = (array) => {
+  input.value = "";
   tasks.innerHTML = "";
   array.forEach((i) => tasks.insertAdjacentHTML("afterbegin", i));
   tasks.classList;
 };
 
 function submitHandler() {
-  count++;
-  arr.push(
-    `<div class="task task${count}">
+  if (input.value.replace(/\s/g, "") !== "") {
+    count++;
+    arr.push(
+      `<div class="task task${count}">
         <p>${input.value}</p>
         <button class="delete task${count}">delete</button>
-    </div>`
-  );
-  updateUI(arr);
+      </div>`
+    );
+    updateUI(arr);
+  }
 }
 
 submit.addEventListener("click", submitHandler);
