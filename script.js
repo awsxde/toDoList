@@ -1,5 +1,6 @@
 let input = document.querySelector(".input");
 let submit = document.querySelector(".submit");
+let clear = document.querySelector(".clear");
 let tasks = document.querySelector(".tasks");
 
 let count = 0;
@@ -30,4 +31,9 @@ function submitHandler() {
   }
 }
 
+function clearHandler() {
+  tasks.innerHTML = "";
+}
+
 submit.addEventListener("click", submitHandler);
+clear.addEventListener("click", clearHandler);

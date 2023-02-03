@@ -6,9 +6,17 @@
   </head>
   <body>
     <div class="container">
-      <input type="text" class="input" />
-      <button class="submit">Add</button>
-      <div class="tasks"></div>
+      <div class="inputField">
+        <input type="text" class="input" />
+        <button class="btn submit"> </button>
+        <button class="btn clear"> </button>
+      </div>
+      <div class="tasks">
+        <div class="task task-${n}">
+          <p class="text">some random task</p>
+          <button class="del del-0"> </button>
+        </div>
+      </div>
     </div>
     <script src="./script.js"></script>
   </body>
