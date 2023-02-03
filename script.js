@@ -7,18 +7,18 @@ let count = 0;
 
 function addCard(val, n) {
   tasks.insertAdjacentHTML(
-    "afterbegin",
-    `<div class="task task-${n}"><p>${val}</p><button class="del del-${n}">delete</button></div>`
+    "beforeend",
+    `<div class="task task-${n}"><p class="text">${val}</p><button class="del del-${n}"> </button></div>`
   );
 }
 
 function delHandler() {
   document.querySelectorAll(".del").forEach((i) => {
-    i.addEventListener("click", () => del(i, i.classList[1].slice(4)));
+    i.addEventListener("click", () => del(i.classList[1].slice(4)));
   });
 }
 
-function del(i, n) {
+function del(n) {
   document.querySelector(`.task-${n}`).classList.add("hide");
 }
 

@@ -1,0 +1,9 @@
+1) icon for :
+        title,
+        delete,
+        add ?
+        clear all ?
+2) custom theme
+3) dark mode
+4) restrict input length
+5) how textField height works?

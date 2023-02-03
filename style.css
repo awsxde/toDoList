@@ -5,10 +5,10 @@
 }
 
 body {
-  background-color: #555;
   color: #fff;
   font-family: lato;
   font-size: 10px;
+  background-color: #4d60fe;
 }
 
 .container {
@@ -17,13 +17,12 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #4d60fe;
   position: relative;
 }
 
 .inputField {
   position: absolute;
-  top: 35%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -44,15 +43,6 @@ body {
   width: 6rem;
 }
 
-.task {
-  width: 30rem;
-  height: 15rem;
-  border-radius: 15px;
-  border: 5px solid #fff;
-  background-color: #3f48cc;
-  position: relative;
-}
-
 .del {
   position: absolute;
   top: 50%;
@@ -62,7 +52,27 @@ body {
   height: 5rem;
   border-radius: 15px;
   border: 5px solid #fff;
-  background-color: rgb(163, 73, 164);
+  background-color: #a349a4;
+}
+
+.taskField {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 93rem;
+  height: 20rem;
+}
+
+.task {
+  width: 30rem;
+  min-height: 15rem;
+  border-radius: 15px;
+  border: 5px solid #fff;
+  background-color: #3f48cc;
+  position: relative;
+  display: inline-block;
+  margin: 5px;
 }
 
 .text {
@@ -70,10 +80,9 @@ body {
   top: 50%;
   left: 35%;
   transform: translate(-50%, -50%);
-  text-align: justify;
   width: 15rem;
-  background-color: red;
   font-size: 22px;
+  text-align: justify;
 }
 
 .hide {
