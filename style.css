@@ -43,18 +43,6 @@ body {
   width: 6rem;
 }
 
-.del {
-  position: absolute;
-  top: 50%;
-  left: 85%;
-  transform: translate(-50%, -50%);
-  width: 5rem;
-  height: 5rem;
-  border-radius: 15px;
-  border: 5px solid #fff;
-  background-color: #a349a4;
-}
-
 .taskField {
   position: absolute;
   top: 60%;
@@ -85,6 +73,36 @@ body {
   text-align: justify;
 }
 
+.del {
+  position: absolute;
+  top: 50%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+  width: 5rem;
+  height: 5rem;
+  border-radius: 15px;
+  border: 5px solid #fff;
+  background-color: #a349a4;
+}
+
+.trash {
+  width: 3rem;
+}
+
 .hide {
   display: none;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input,
+.submit,
+.clear {
+  font-size: 20px;
+}
+
+.icon {
+  border-radius: 100px;
 }

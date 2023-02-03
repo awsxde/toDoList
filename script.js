@@ -8,7 +8,14 @@ let count = 0;
 function addCard(val, n) {
   tasks.insertAdjacentHTML(
     "beforeend",
-    `<div class="task task-${n}"><p class="text">${val}</p><button class="del del-${n}"> </button></div>`
+    `
+    <div class="task task-${n}">
+      <p class="text">${val}</p>
+        <button class="del del-${n}">
+          <img src="./trash-outline.svg" alt="trash" class="trash" />
+        </button>
+    </div>
+    `
   );
 }
 
