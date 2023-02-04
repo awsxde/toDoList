@@ -5,18 +5,27 @@
     <link rel="stylesheet" href="./style.css" />
     <link rel="shortcut icon" type="image/png" href="./icon.png" />
   </head>
-  <body>
+  <body class="special">
     <div class="container">
+      <button class="theme">
+        <img src="./moon.png" alt="moon" class="moon" />
+      </button>
       <div class="inputField">
-        <input type="text" class="input" />
-        <button class="btn submit">add</button>
-        <button class="btn clear">clear all</button>
+        <input type="text" class="input special" />
+        <button class="btn submit special">add</button>
+        <button class="btn clear special">clear all</button>
       </div>
       <div class="taskField">
-        <div class="tasks"></div>
+        <div class="tasks">
+          <!-- <div class="task task-${n} special">
+            <p class="text">${val}</p>
+            <button class="del del-${n} special">
+              <img src="./trash-outline.svg" alt="trash" class="trash" />
+            </button>
+          </div> -->
+        </div>
       </div>
     </div>
     <script src="./script.js"></script>
   </body>
 </html>
-<!-- https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F622200504739203779%2F&psig=AOvVaw1ihtorPp24z9CNtz_OinJF&ust=1675541544055000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCIDxtuuU-vwCFQAAAAAdAAAAABAL -->

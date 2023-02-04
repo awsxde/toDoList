@@ -1,7 +1,17 @@
 let input = document.querySelector(".input");
-let submit = document.querySelector(".submit");
+let add = document.querySelector(".submit");
 let clear = document.querySelector(".clear");
 let tasks = document.querySelector(".tasks");
+
+let darkMode = document.querySelector(".theme");
+let body = document.querySelector("body");
+let isDark = false;
+
+darkMode.addEventListener("click", () => {
+  let special = document.querySelectorAll(".special");
+  special.forEach((i) => i.classList.add("dark"));
+  isDark = true;
+});
 
 let count = 0;
 
@@ -9,9 +19,9 @@ function addCard(val, n) {
   tasks.insertAdjacentHTML(
     "beforeend",
     `
-    <div class="task task-${n}">
+    <div class="task task-${n} ${isDark ? "dark" : "special"}">
       <p class="text">${val}</p>
-        <button class="del del-${n}">
+        <button class="del del-${n} ${isDark ? "dark" : "special"}">
           <img src="./trash-outline.svg" alt="trash" class="trash" />
         </button>
     </div>
@@ -42,5 +52,5 @@ function clearHandler() {
   tasks.innerHTML = "";
 }
 
-submit.addEventListener("click", submitHandler);
+add.addEventListener("click", submitHandler);
 clear.addEventListener("click", clearHandler);
