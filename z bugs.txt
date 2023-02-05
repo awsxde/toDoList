@@ -1,6 +1,5 @@
 1) rounded icon for title
 2) custom theme
-3) dark mode
-4) restrict input length
-5) how textField height works?
-6) improving input style
+3) restrict input length
+4) how textField height works?
+5) using cache probably
